@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+<title>การเพิ่มข้อมูล</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
+<style>
+body, h1, h2, h3, h4, h5, h6  {
+  font-family: Kanit, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+</style>  
+<body class="w3-theme-l5">
+  <div class="w3-bar w3-border w3-theme">
+    <div class="w3-bar-item w3-xxxlarge">
+        การเพิ่มข้อมูล
+    </div> 
+  </div>   
+  <br>
+  <div class="w3-container">
+  <?var url = getUrl();?>
+   <form class="w3-container" method="POST" action="<?= url;?>">
+    <div class="w3-section">
+    <label class="w3-xxlarge">ชื่อ</label>
+    <input class = "w3-input w3-border w3-margin-bottom w3-xxxlarge" name="name" required>
+    <label class="w3-xxlarge">หน่วยงาน</label>
+    <input class = "w3-input w3-border w3-margin-bottom w3-xxxlarge" name="dep" required>
+    <label class="w3-xxlarge">เบอร์โทรศัพท์</label>
+    <input class = "w3-input w3-border w3-margin-bottom w3-xxxlarge" name="tel" required>
+    <input name="url" type="hidden" value="<?= url; ?>">
+    <br>
+    <p>
+    <input class="w3-button w3-theme-d4 w3-round-large w3-block w3-xxxlarge" type="Submit" name="save" value="Save" style="width:100%">
+    </p>
+    </div>
+  </form>
+
+  </div>
+
+</body>
+</html>
+
+
